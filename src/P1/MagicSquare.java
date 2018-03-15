@@ -6,23 +6,25 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MagicSquare {
 
 	public static void main(String[] args) throws IOException {
 		MagicSquare mg = new MagicSquare();
-		boolean test = mg.isLegalMagicSquare("D:\\SoftwareConstruction\\coderepo\\src\\P1\\txt\\1.txt");
-		boolean test1 = mg.isLegalMagicSquare("D:\\SoftwareConstruction\\coderepo\\src\\P1\\txt\\2.txt");
-		boolean test2 = mg.isLegalMagicSquare("D:\\SoftwareConstruction\\coderepo\\src\\P1\\txt\\3.txt");
-		boolean test3 = mg.isLegalMagicSquare("D:\\SoftwareConstruction\\coderepo\\src\\P1\\txt\\4.txt");
-		boolean test4 = mg.isLegalMagicSquare("D:\\SoftwareConstruction\\coderepo\\src\\P1\\txt\\5.txt");
+		boolean test = mg.isLegalMagicSquare("src/P1/txt/1.txt");
+		boolean test1 = mg.isLegalMagicSquare("src/P1/txt/2.txt");
+		boolean test2 = mg.isLegalMagicSquare("src/P1/txt/3.txt");
+		boolean test3 = mg.isLegalMagicSquare("src/P1/txt/4.txt");
+		boolean test4 = mg.isLegalMagicSquare("src/P1/txt/5.txt");
 		System.out.println(test);
 		System.out.println(test1);
 		System.out.println(test2);
 		System.out.println(test3);
 		System.out.println(test4);
-		if( MagicSquare.generateMagicSquare(-1)){
-			boolean test5 = mg.isLegalMagicSquare("D:\\SoftwareConstruction\\coderepo\\src\\P1\\txt\\6.txt");
+		Scanner in = new Scanner(System.in);
+		if( MagicSquare.generateMagicSquare(in.nextInt())){
+			boolean test5 = mg.isLegalMagicSquare("src/P1/txt/6.txt");
 			System.out.println(test5);
 		}
 	}
